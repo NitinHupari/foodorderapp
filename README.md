@@ -1,0 +1,1 @@
+Online Food Delivery System or Online Food Ordering System is a web application developed to sell Foods in the easiest way. It is a form of electronic commerce which allows customers to directly buy foods from the internet using a Web browser.
