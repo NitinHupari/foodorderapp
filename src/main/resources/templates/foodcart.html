@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap demo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+	<div th:replace="navbar::navbar_section">
+			</div>
+	<!--<h2>[[${foodlist}]]</h2>-->
+<!--<h2>[[${foodlist.size()}]]</h2>-->
+
+<div class="container">
+	            
+	  <table class="table table-bordered table-striped">
+	    <thead>
+	     <tr class="bg-info">
+			<th>Cart Id</th>
+	        <th>Food Name</th>
+	        <th>Food Price</th>
+			<th>Food Image</th>
+			<th>Quantity</th>
+			<th>Action</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+			
+		   <tr th:each="f:${foodlist}">
+			<td font style="font-weight: bolder;" th:text="${f.eat.foodid}"></td>
+	        <td font style="font-weight: bolder;" th:text="${f.eat.foodname}"></td>
+	        <td font style="font-weight: bolder;" th:text="${f.eat.foodprice}"></td>
+	        <!--<td font style="font-weight: bolder;" th:text="${f.eat.foodimage}"></td>-->
+			<td><img th:src="@{'image/'+${f.eat.foodimage}}" class="card-img-top" height="100" width="20"></td>
+			<td font style="font-weight: bolder;" th:text="${f.quantity}"></td>
+						
+			<td><a th:href="@{/finalsave}" class="btn btn-primary btn-sm">OrderFood</a></td>
+			</form>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+-->
+</body>
+
+</html>
